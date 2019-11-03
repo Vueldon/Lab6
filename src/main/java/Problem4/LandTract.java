@@ -13,6 +13,7 @@ public class LandTract
 {
     private float length;
     private float width;
+    private float area;
     
     public void setLength(float length)
     {
@@ -29,14 +30,14 @@ public class LandTract
         this.length = length;
         this.width = width;
         
-        float area = this.length * this.width;
+        area = this.length * this.width;
         
         return area;
     }
     
-    public boolean equals(LandTract area2)
+    public boolean equals(LandTract land2)
     {
-        if ((this.length * this.width) == area2.getArea(length, width))
+        if(this.getArea(this.length, this.width) == land2.getArea(length, width))
         {
             return true;
         }
@@ -49,6 +50,6 @@ public class LandTract
     @Override
     public String toString()
     {
-        return "Area: " + (length * width);
+        return Float.toString(area);
     }
 }

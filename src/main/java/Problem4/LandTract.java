@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.Problem4;
+package Problem4;
 
 /**
  *
@@ -29,29 +29,26 @@ public class LandTract
         this.length = length;
         this.width = width;
         
-        float area = length * width;
+        float area = this.length * this.width;
         
         return area;
     }
     
     public boolean equals(LandTract area2)
     {
-        boolean equalArea;
-        
         if ((this.length * this.width) == area2.getArea(length, width))
         {
-            equalArea = true;
+            return true;
         }
         else
         {
-            equalArea = false;
+            return false;
         }
-        return equalArea;
     }
 
     @Override
     public String toString()
     {
-        return "Length: " + length + ", Width: " + width;
+        return "Area: " + (length * width);
     }
 }

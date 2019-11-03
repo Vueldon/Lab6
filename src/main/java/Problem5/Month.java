@@ -97,7 +97,7 @@ public class Month
     
     public boolean equals(Month month1)
     {
-        if(this.monthName == month1.toString())
+        if(this.monthName.equals(month1.toString()))
         {
             return true;
         }
